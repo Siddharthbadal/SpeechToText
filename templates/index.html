@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style.css">
+    <title>Flask Speech To Text</title>
+</head>
+<body>
+
+
+    <main class="">  
+        <div class="container">
+            <h1>Upload Audio File (.wav)</h1>
+            <form action="" method="POST" enctype="multipart/form-data">
+                <input type='file' name="file" class="input" />   
+                <br>
+                <input class="btn" type="submit" value="Transcribe">
+            </form>
+            {% if transcript != "" %}
+            <div >
+                <h1>Transcript</h1>
+                <p class="text">
+                        {{transcript}}
+                </p>
+                <h5 class="words">Total Words: {{count}}</h5>
+                {% for w in commonWord %}
+                <h5>Most Common Word: {{w[0]}} <small>({{w[1]}} times)</small></h5>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+
+
+    </main>
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+.container{
+    font-family: arial;
+    font-size: 24px;
+    margin: 100px;
+    width: 80%;
+    height:100%;
+}
+
+.btn{
+    background: darkblue;
+    color:#fff;
+    font-weight: bold;
+    padding: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 10%;
+    border:1px solid darkblue;
+}
+
+.input{
+    padding: 10px;
+}
+
+.text{
+    color: darkblue;
+    margin-left:30px;
+}
+
+.words{
+    margin-top: 50px;
+}
